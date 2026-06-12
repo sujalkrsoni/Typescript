@@ -1,6 +1,3 @@
-# Typescript
-A comprehensive TypeScript repository featuring course code, notes, and hands-on examples. Learn everything from core TypeScript concepts to advanced types, React, Node.js, runtime validation, and compiler internals. 🗿
-
 # TypeScript Master 🚀
 
 A complete TypeScript learning repository containing all code examples, exercises, notes, and projects from **The Ultimate TypeScript Course**.
