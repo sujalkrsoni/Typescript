@@ -1,0 +1,1 @@
+ ### This  Section is only for me, because in Ts history video sir describe about V8 and i forgot the major roles of v8 then i tought to revise.
