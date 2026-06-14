@@ -2,7 +2,7 @@
 
 ## What is `tsconfig.json`?
 
-`tsconfig.json` is the configuration file for the TypeScript Compiler (TSC).
+`tsconfig.json` is the configuration file for the TypeScript Compiler (TSC). and an intresting thing is that its also used by the VS code TypeScript Language server for suggestion, Hints and Typechecking.
 
 It tells TypeScript:
 
