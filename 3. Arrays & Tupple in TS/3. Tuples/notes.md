@@ -193,6 +193,34 @@ you get:
 
 ---
 
+# Readonly Tuples
+
+TypeScript also supports `readonly` tuples.
+
+```ts
+const d: readonly [string, number] = [
+  "Sujal Kumar Soni",
+  22
+];
+```
+
+---
+
+## Why use `readonly`?
+
+It prevents tuple mutation methods like:
+
+```ts
+d.push(1);
+d.pop();
+d.shift();
+d.unshift("hello");
+```
+
+This is useful when you want the tuple shape to stay fixed.
+
+---
+
 # Fixed Length Nature
 
 ```ts
