@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "diagnostics": true, // for the logging the time taken to compile the file for debugging 
+    "noEmit": true
+  }
+}
