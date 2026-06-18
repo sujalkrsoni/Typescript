@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "moduleDetection": "force", // to say that all files will be a module, not a global level 
+     "module": "esnext"
+  }
+}
