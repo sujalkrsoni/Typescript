@@ -87,5 +87,29 @@ Object   -> Almost same as {}
 
 object   -> Only non-primitive values
 
+---
+
+One more interesting thing to note:
+
+`{}` represents all values except `null` and `undefined`.
+
+So if you create a union like this:
+
+```ts
+type T = {} | null | undefined;
+```
+
+it becomes equivalent to `unknown`, because `{}` already covers every possible value except `null` and `undefined`, and the union adds those remaining two values as well.
+
+```ts
+{} // Everything except null and undefined
+{} | null | undefined // Everything
+unknown // Everything
+```
+
+If you hover over the type `T` in VS Code, TypeScript will not simplify and display it as `unknown`. It will still show like `{} | null | undefined`.
+
+However, from a type-system perspective, both represent the same set of possible values.
+
 ```
 ```
