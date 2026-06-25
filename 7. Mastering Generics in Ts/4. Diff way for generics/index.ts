@@ -60,5 +60,50 @@ console.log(echoString4);
 
 
 
-// ? 5th way
+//? Genric Type & Genric functions 
+
+type myGenType<T> = (str : T) => T // Generic type
+type myGenTypeInterface<T> = (str : T) => T // Generic interface
+
+const myGenFunc : myGenType<string> = (str) => str;
+const myGenFunc2 : myGenTypeInterface<number> = (num) => num;
+
+console.log(myGenFunc("Hello"));   
+ console.log(myGenFunc(23));  //! Error : Argument of type 'number' is not assignable to parameter of type 'string'.
+console.log(myGenFunc2("hello"));  //! Error : Argument of type 'string' is not assignable to parameter of type 'number'.   
+console.log(myGenFunc2(23));   // here we can see that, we can use generic type & generic interface to create generic functions, but we have to specify the type of data we want to use in it.
+
+
+// * in generic type & generic interface, we can use any type of data we want to use in it, but we have to specify the type of data we want to use in it.
+
+// ! and there is another term that we can generic functions, which allows us to create generic functions without specifying the type of data we want to use in it, and that is called "Generic Functions".
+// ! basically, generic functions are functions that can work with any type of data, and we can specify the type of data we want to use in it when we call the function.
+
+
+
+
+
+// * generic functions :
+// ! generic functions using type :
+type myGenFuncType = <T>(str : T) => T;  // here we can see that, we can use generic functions to create generic functions, and we can specify the type of data we want to use in it when we call the function.
+
+const myGenFunc3 : myGenFuncType = (val) => val;  // here look the syntax of generic functions, we can use the generic type in the function parameter, and we can specify the type of data we want to use in it when we call the function.
+
+console.log(myGenFunc3("Hello")); 
+console.log(myGenFunc3(23));  
+console.log(myGenFunc3(true));   // here look we can use any type of data we want to use in it, and we can specify the type of data we want to use in it when we call the function.
+
+
+
+
+// * generic functions using interface :
+interface myGenFuncInterface {
+    <T>(str : T) : T;  // here we can see that, we can use generic functions to create generic functions, and we can specify the type of data we want to use in it when we call the function.
+}
+
+const myGenFunc4 : myGenFuncInterface = (val) => val;  // here look the syntax of generic functions, we can use the generic type in the function parameter, and we can specify the type of data we want to use in it when we call the function.
+
+console.log(myGenFunc4("Hello")); 
+console.log(myGenFunc4(23));  
+console.log(myGenFunc4(true));   // here look we can use any type of data we want to use in it, and we can specify the type of data we want to use in it when we call the function.
 
