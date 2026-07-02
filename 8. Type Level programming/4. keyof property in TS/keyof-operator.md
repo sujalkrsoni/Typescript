@@ -6,6 +6,20 @@ The `keyof` operator is takes a type as input and returns:
 
 ---
 
+### in javascript we don't have keyof operator there is only typeof operator there 
+### but in TS we've both typeof and keyof operator 
+
+# keyof operator takes the typeof a value then return the all properties of that value 
+for example : let a = {name : "sujal", age : 20} 
+and we can access the properties of a using a["name"] or a["age"] or a.name or a.age
+and if we use a["name"] or a["age"] or a.name or a.age then it will return the value of that property
+but if we use a["address"] or a.address then it will give an error because address property is not present in a
+so we can use keyof operator to check if a property is present in a or not
+
+# so if we use keyof operator then it will return the all properties of a
+
+let allPropertiesOfA = keyof a;
+
 ## 🔑 Basic Example
 
 ```ts id="1hq19e"
